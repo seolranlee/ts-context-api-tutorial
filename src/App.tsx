@@ -1,12 +1,15 @@
 import React from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import { TodosContextProvder } from './contexts/TodosContext';
 
 function App() {
   return (
     <>
-      <TodoForm/>
-      <TodoList/>
+      <TodosContextProvder>
+        <TodoForm/>
+        <TodoList/>
+      </TodosContextProvder>
     </>
   );
 }
